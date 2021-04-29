@@ -26,8 +26,8 @@ def receive_message(ser, num_bytes=32):  #32?
     lst2 = []
     while(var==None):
         sz = ser.inWaiting()
-        print(sz)
-        ser.flushInput()
+        #print(sz)
+        #ser.flushInput()
         var = ser.readline(32).decode('utf-8')
         #print(var)
         lst = (var.split())[0].split(",")
